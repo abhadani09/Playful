@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunch Date?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .message {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    .button {
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .button:hover {
+      background-color: #eee;
+    }
+    .yes {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+    .no {
+      background-color: #f1c40f;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="message">Wassup!Asshole </h1>
+    <div class="buttons">
+      <button class="button yes">Getting Bored</button>
+      <button class="button no">Leave Me Alone</button>
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.querySelector('.no');
+
+    noButton.addEventListener('click', () => {
+      const randomX = Math.floor(Math.random() * window.innerWidth - noButton.clientWidth);
+      const randomY = Math.floor(Math.random() * window.innerHeight - noButton.clientHeight);
+      noButton.style.left = `${randomX}px`;
+      noButton.style.top = `${randomY}px`;
+    });
+  </script>
+</body>
+</html>
